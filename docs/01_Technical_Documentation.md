@@ -1,6 +1,6 @@
 ---
 title: "MicroFlow AI — Technical Documentation"
-subtitle: "2026 Shenzhen International FinTech Competition · International Track · Topic E: SME Finance Copilot"
+subtitle: "MVP v0.1 (October 2026) — originally prepared for the 2026 Shenzhen International FinTech Competition"
 ---
 
 # 1. Summary

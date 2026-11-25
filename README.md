@@ -1,18 +1,29 @@
-# MicroFlow AI — SME Finance Copilot
+# MicroFlow Agent — Autonomous Cash-Flow & Financing Agent for SMEs
 
-**2026 Shenzhen International FinTech Competition · International Track · Topic E: SME Finance Copilot**
-Theme: *AI as a Financial Participant*
+**Team FlowOps · ElSewedy University of Technology (SUTech) · AI Hackathon 2026 (AOU AI Summit) · Track 2: Agentic AI & Autonomous Intelligent Systems**
 
-MicroFlow AI is an AI agent for small-business owners. It reads the documents an Egyptian SME already has (bank statements, e-invoices, even informal Arabic/English receipt notes), predicts when each customer will actually pay, forecasts cash 13 weeks ahead, explains an alternative credit score factor by factor, finds the cheapest financing that closes the cash gap, and drafts the application — then waits for the owner's approval before anything is sent.
+MicroFlow Agent helps small-business owners see a cash crisis weeks before it happens and act on it. It reads the documents an Egyptian SME already has (bank statements, e-invoices, even informal Arabic/English receipt notes), predicts when each customer will actually pay, forecasts cash 13 weeks ahead, explains a credit score factor by factor, finds the cheapest financing that closes the gap and drafts the application. Nothing is submitted without the owner's approval.
 
-| Capability required by Topic E | Where it lives |
-|---|---|
-| Financing-option matching | `backend/copilot.py` → `match_financing` (factoring vs discounting vs loan, ranked by cost per EGP 1,000) |
-| Cash-flow management with alerts | `backend/copilot.py` → `forecast_cashflow`, `build_alerts` (base + stress scenarios) |
-| Business financial analysis | `backend/ai_engine.py` → XGBoost invoice-delay model + explainable 7-factor scorecard |
-| Agent that completes real tasks | `POST /api/agent/run`: observe → analyse → decide → act (draft application) → owner approval → sandbox provider decision |
+## Project status — what is built and what is next
 
----
+> **Honest scope.** The current release (**v0.1 MVP**, October 2026, first built for the 2026 Shenzhen International FinTech Competition) runs a **fixed, rule-based agent workflow** and keyword-based Q&A. The **LLM-driven multi-agent layer is the hackathon build** and lives on the `hackathon` branch. All data and lenders are synthetic; no real money moves.
+
+| | Capability | Where it lives |
+|---|---|---|
+| ✅ Built | Document ingestion (CSV/PDF statements; XML/JSON/PDF invoices; Arabic text), XXE-safe, 5 MB cap | `backend/parser.py` |
+| ✅ Built | Field-level AES-256-GCM encryption, JWT, RBAC, tenant isolation, hash-chained audit log | `backend/security.py`, `backend/main.py` |
+| ✅ Built | XGBoost payment-delay model (test MAE 6.46 days vs 7.70 baseline) | `backend/ai_engine.py` |
+| ✅ Built | Explainable 7-factor credit scorecard + policy checks | `backend/ai_engine.py` |
+| ✅ Built | 13-week cash forecast (base + stress) with alerts; financing matcher (cost per EGP 1,000) | `backend/copilot.py` |
+| ✅ Built | Fixed workflow: observe → analyse → decide → draft → owner approval → sandbox lender | `backend/copilot.py` → `agent_plan`, `POST /api/agent/run` |
+| 🔨 Hackathon | LLM orchestrator with tool calling (plan → act → observe → re-plan); existing modules exposed as typed tools | `hackathon` branch |
+| 🔨 Hackathon | Specialist agents: cash-flow, collections (Arabic payment reminders), financing, guardrail | `hackathon` branch |
+| 🔨 Hackathon | Memory of past decisions and owner preferences; proactive daily monitoring | `hackathon` branch |
+| 🔨 Hackathon | LLM-based Arabic / Egyptian-dialect conversation replacing keyword Q&A | `hackathon` branch |
+
+**Guardrails that will not change:** the LLM plans, but every number comes from the deterministic, tested tools; any action that leaves the system (a reminder, a financing application) needs the owner's explicit approval; every agent step is written to the tamper-evident audit log.
+
+**Demo:** [DEMO LINK] · **Video:** [VIDEO LINK]
 
 ## Quick start (local, ~3 minutes)
 
@@ -32,7 +43,7 @@ Or run `./run_local.sh` to do all of the above.
 2. Tab 1: click **Load bundled demo dataset** (2 statements as CSV + PDF, invoices as XML, JSON and PDF).
 3. Tab 2: **Generate credit dossier** — score, grade, factor contributions, policy checks.
 4. Tab 3: cash-flow runway chart with base/stress scenarios and alerts.
-5. Tab 4: **Run the copilot agent** → reasoning trace → financing draft → **Approve & submit** → sandbox provider response. Ask questions in English or Arabic.
+5. Tab 4: **Run the copilot agent** (today: the fixed v0.1 workflow) → reasoning trace → financing draft → **Approve & submit** → sandbox provider response. Ask questions in English or Arabic.
 6. Tab 5: audit log, **Verify hash chain integrity**, and the raw ciphertext the database stores.
 7. Sign out and sign in as **Advisor**, **Bank auditor** or the **other tenant** to see role and tenant restrictions.
 
@@ -90,10 +101,6 @@ python scripts/run_sandbox_demo.py     # regenerates evidence/ (sandbox operatio
    Streamlit dashboard (frontend/app.py)  ·  sandbox NBFI provider (simulated)
 ```
 
-[![Architecture diagram of kareem-diaa/microflow-ai](https://gitdiagram.com/kareem-diaa/microflow-ai/diagram.png)](https://gitdiagram.com/kareem-diaa/microflow-ai?utm_source=readme&utm_medium=picture)
-
-![image alt](https://github.com/kareem-diaa/MicroFlow-AI/blob/a4bce4070a407d7dfcc9761ff318359dc2a54dba/diagram.png)
-
 ## Key results on the demo dataset
 
 | Metric | Value |
@@ -137,13 +144,24 @@ frontend/  app.py (Streamlit dashboard)
 scripts/   generate_samples.py, run_sandbox_demo.py
 tests/     pytest suite
 data/samples/   synthetic statements and invoices
-evidence/  sandbox operation logs (deliverable 06)
+evidence/  sandbox operation logs (MVP v0.1)
 docs/      technical documentation, security self-assessment
 ```
 
 ## Team
 
-Kareem Diaa Helal · Ahmed Mohamed · Mostafa Abdelhamed — ElSewedy University of Technology (SUTech), Cairo, Egypt.
+**Team FlowOps** — ElSewedy University of Technology (SUTech), Faculty of Computer Engineering Technology, Cairo, Egypt
+
+- Kareem Diaa Helal — Team Leader
+- Ahmed Mohamed Elsayed Mohamed
+- Mostafa Abdelhamed Mahmoud
+
+**Academic supervisor:** Prof. Dr. Rehab Farouk Abdelkader
+
+## Project history
+
+- **v0.1 (Oct 2026):** MVP built for the 2026 Shenzhen International FinTech Competition (International Track, Topic E: SME Finance Copilot) under the name *MicroFlow AI*. Its documents are kept in `docs/` as a record.
+- **v0.2 (Dec 2026, in progress):** MicroFlow Agent, the agentic multi-agent version, for AI Hackathon 2026.
 
 ## License
 

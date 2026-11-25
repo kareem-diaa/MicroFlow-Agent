@@ -1,4 +1,4 @@
-"""Execution evidence (submission deliverable 06).
+"""Execution evidence for the MVP sandbox scenario.
 
 Runs the complete MicroFlow AI scenario against a fresh sandbox database through the real
 REST API and writes every request/response to evidence/:

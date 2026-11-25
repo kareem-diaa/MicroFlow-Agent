@@ -97,9 +97,9 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(
-    title="MicroFlow AI",
+    title="MicroFlow Agent",
     version="1.0.0",
-    description="SME Finance Copilot: cash-flow alerts, explainable alternative credit and financing matching.",
+    description="MicroFlow Agent: cash-flow alerts, explainable alternative credit and financing matching for SMEs.",
     lifespan=lifespan,
 )
 app.add_middleware(

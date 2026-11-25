@@ -16,7 +16,7 @@ DEMO_USERS = {
     "SME owner - Delta Textiles (other tenant)": "owner@delta.example",
 }
 
-st.set_page_config(page_title="MicroFlow AI", page_icon="💧", layout="wide")
+st.set_page_config(page_title="MicroFlow Agent", page_icon="💧", layout="wide")
 st.markdown(
     """
     <style>
@@ -63,8 +63,8 @@ def egp(x) -> str:
 # Sidebar: login
 # ---------------------------------------------------------------------------
 with st.sidebar:
-    st.title("💧 MicroFlow AI")
-    st.caption("SME Finance Copilot · sandbox demo")
+    st.title("💧 MicroFlow Agent")
+    st.caption("Autonomous cash-flow & financing agent · sandbox demo")
     if "token" not in st.session_state:
         who = st.selectbox("Sign in as", list(DEMO_USERS))
         pw = st.text_input("Password", type="password", value="Demo@2026!")
@@ -113,14 +113,20 @@ with tabs[0]:
             f = st.file_uploader("Statement", type=["pdf", "csv", "txt"], key="stmt")
             if f and st.button("Ingest statement"):
                 data, err = call("POST", "/api/upload-statement", params=P, files={"file": (f.name, f.getvalue())})
-                st.error(err) if err else st.success(data)
+                if err:
+                    st.error(err)
+                else:
+                    st.success(data)
         with c2:
             st.subheader("E-invoices")
             st.caption("XML batch, JSON, or PDF invoice")
             f2 = st.file_uploader("Invoice file", type=["xml", "json", "pdf"], key="inv")
             if f2 and st.button("Ingest invoices"):
                 data, err = call("POST", "/api/upload-invoice", params=P, files={"file": (f2.name, f2.getvalue())})
-                st.error(err) if err else st.success(data)
+                if err:
+                    st.error(err)
+                else:
+                    st.success(data)
         st.divider()
         if st.button("Load bundled demo dataset (synthetic)", type="primary"):
             data, err = call("POST", "/api/demo/load-samples")
@@ -252,10 +258,16 @@ with tabs[3]:
                         b1, b2, _ = st.columns([1, 1, 4])
                         if b1.button("Approve & submit", key=f"ap{a['id']}", type="primary"):
                             r, e = call("POST", f"/api/financing/applications/{a['id']}/approve")
-                            st.error(e) if e else st.rerun()
+                            if e:
+                                st.error(e)
+                            else:
+                                st.rerun()
                         if b2.button("Reject", key=f"rj{a['id']}"):
                             r, e = call("POST", f"/api/financing/applications/{a['id']}/reject")
-                            st.error(e) if e else st.rerun()
+                            if e:
+                                st.error(e)
+                            else:
+                                st.rerun()
                     elif a["status"] == "pending_owner_approval":
                         st.caption("Waiting for the business owner's approval.")
     if "agent:ask" in perms:
@@ -263,7 +275,10 @@ with tabs[3]:
         q = st.text_input("e.g. When do I run out of cash? · Why is my score low? · Who will pay late? · متى تنفد السيولة؟")
         if q:
             ans, err = call("POST", "/api/agent/ask", json={"question": q, "business_id": BID})
-            st.error(err) if err else st.info(ans["answer"])
+            if err:
+                st.error(err)
+            else:
+                st.info(ans["answer"])
 
 # ---------------------------------------------------------------------------
 # 5. Audit vault
