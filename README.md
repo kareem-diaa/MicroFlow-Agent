@@ -67,6 +67,17 @@ python scripts/run_sandbox_demo.py     # regenerates evidence/ (sandbox operatio
 
 ## Architecture
 
+### Current MVP (v0.1, built)
+![MicroFlow Agent v0.1 architecture](diagram.png)
+
+### Target agentic architecture (hackathon build)
+![MicroFlow Agent target multi-agent architecture](docs/diagrams/target_agentic_architecture.png)
+
+*Green = existing MVP modules reused as agent tools · Blue = new agentic layer · Red = human and safety controls.*
+
+<details>
+<summary>Text version of the v0.1 pipeline</summary>
+
 ```
  Statements (PDF/CSV/text)   E-invoices (XML/JSON/PDF)
               │                        │
@@ -100,6 +111,7 @@ python scripts/run_sandbox_demo.py     # regenerates evidence/ (sandbox operatio
               ▼
    Streamlit dashboard (frontend/app.py)  ·  sandbox NBFI provider (simulated)
 ```
+</details>
 
 ## Key results on the demo dataset
 
