@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "status": "submitted_approved",
+    "created_by": "agent",
+    "payload": {
+      "offer_id": "NF-FACT-01",
+      "provider": "NileFactor (sandbox NBFI)",
+      "product": "invoice_factoring",
+      "eligible": true,
+      "invoices": [
+        {
+          "invoice_id": 8,
+          "invoice_number": "ANB-2026-0038",
+          "buyer_name": "Downtown Public Hospital Canteen",
+          "amount": 106400.0,
+          "advance": 90440.0,
+          "fee": 2340.8,
+          "days_to_collection": 26,
+          "effective_apr": 0.3633
+        },
+        {
+          "invoice_id": 20,
+          "invoice_number": "ANB-2026-0093",
+          "buyer_name": "Heliopolis Hotel Group",
+          "amount": 127400.0,
+          "advance": 108290.0,
+          "fee": 5605.6,
+          "days_to_collection": 52,
+          "effective_apr": 0.3633
+        },
+        {
+          "invoice_id": 3,
+          "invoice_number": "ANB-2026-0012",
+          "buyer_name": "Nile View Hotel",
+          "amount": 172600.0,
+          "advance": 146710.0,
+          "fee": 7594.4,
+          "days_to_collection": 51,
+          "effective_apr": 0.3705
+        },
+        {
+          "invoice_id": 15,
+          "invoice_number": "ANB-2026-0067",
+          "buyer_name": "Giza Food Distributors",
+          "amount": 81400.0,
+          "advance": 69190.0,
+          "fee": 1790.8,
+          "days_to_collection": 24,
+          "effective_apr": 0.3936
+        }
+      ],
+      "funds_unlocked": 414630.0,
+      "total_cost": 17331.6,
+      "covers_need": true,
+      "cost_per_1000_egp": 41.8,
+      "credit_score": 57.9,
+      "funding_gap": 391649.32,
+      "as_of": "2026-10-19",
+      "provider_response": {
+        "provider": "NileFactor (sandbox NBFI)",
+        "reference": "SBX-F4025422B7",
+        "decision": "approved",
+        "amount": 414630.0,
+        "disbursement": "T+2 business days (sandbox)",
+        "note": "Simulated response from the MicroFlow sandbox; no real funds move."
+      }
+    }
+  }
+]

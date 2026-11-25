@@ -1,0 +1,202 @@
+[
+  {
+    "invoice_number": "ANB-2026-0010",
+    "buyer_name": "Nile View Hotel",
+    "buyer_tax_id": "301-552-118",
+    "buyer_sector": "hotel",
+    "amount": 196800.0,
+    "issue_date": "2026-08-06",
+    "due_date": "2026-09-20",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0011",
+    "buyer_name": "Nile View Hotel",
+    "buyer_tax_id": "301-552-118",
+    "buyer_sector": "hotel",
+    "amount": 170400.0,
+    "issue_date": "2026-08-29",
+    "due_date": "2026-10-13",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0012",
+    "buyer_name": "Nile View Hotel",
+    "buyer_tax_id": "301-552-118",
+    "buyer_sector": "hotel",
+    "amount": 172600.0,
+    "issue_date": "2026-09-20",
+    "due_date": "2026-11-04",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0013",
+    "buyer_name": "Nile View Hotel",
+    "buyer_tax_id": "301-552-118",
+    "buyer_sector": "hotel",
+    "amount": 165300.0,
+    "issue_date": "2026-10-10",
+    "due_date": "2026-11-24",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0026",
+    "buyer_name": "GreenBasket Supermarkets",
+    "buyer_tax_id": "402-118-930",
+    "buyer_sector": "supermarket",
+    "amount": 121000.0,
+    "issue_date": "2026-09-02",
+    "due_date": "2026-10-02",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0028",
+    "buyer_name": "GreenBasket Supermarkets",
+    "buyer_tax_id": "402-118-930",
+    "buyer_sector": "supermarket",
+    "amount": 142800.0,
+    "issue_date": "2026-10-02",
+    "due_date": "2026-11-01",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0037",
+    "buyer_name": "Downtown Public Hospital Canteen",
+    "buyer_tax_id": "100-220-417",
+    "buyer_sector": "government",
+    "amount": 90200.0,
+    "issue_date": "2026-06-17",
+    "due_date": "2026-08-16",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0038",
+    "buyer_name": "Downtown Public Hospital Canteen",
+    "buyer_tax_id": "100-220-417",
+    "buyer_sector": "government",
+    "amount": 106400.0,
+    "issue_date": "2026-07-10",
+    "due_date": "2026-09-08",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0039",
+    "buyer_name": "Downtown Public Hospital Canteen",
+    "buyer_tax_id": "100-220-417",
+    "buyer_sector": "government",
+    "amount": 80300.0,
+    "issue_date": "2026-08-01",
+    "due_date": "2026-09-30",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0040",
+    "buyer_name": "Downtown Public Hospital Canteen",
+    "buyer_tax_id": "100-220-417",
+    "buyer_sector": "government",
+    "amount": 109200.0,
+    "issue_date": "2026-08-22",
+    "due_date": "2026-10-21",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0041",
+    "buyer_name": "Downtown Public Hospital Canteen",
+    "buyer_tax_id": "100-220-417",
+    "buyer_sector": "government",
+    "amount": 114000.0,
+    "issue_date": "2026-09-12",
+    "due_date": "2026-11-11",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0042",
+    "buyer_name": "Downtown Public Hospital Canteen",
+    "buyer_tax_id": "100-220-417",
+    "buyer_sector": "government",
+    "amount": 72300.0,
+    "issue_date": "2026-10-02",
+    "due_date": "2026-12-01",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0056",
+    "buyer_name": "Bean & Crumb Cafes",
+    "buyer_tax_id": "588-301-662",
+    "buyer_sector": "cafe",
+    "amount": 45400.0,
+    "issue_date": "2026-10-10",
+    "due_date": "2026-10-25",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0066",
+    "buyer_name": "Giza Food Distributors",
+    "buyer_tax_id": "219-774-503",
+    "buyer_sector": "distributor",
+    "amount": 90000.0,
+    "issue_date": "2026-09-08",
+    "due_date": "2026-10-08",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0067",
+    "buyer_name": "Giza Food Distributors",
+    "buyer_tax_id": "219-774-503",
+    "buyer_sector": "distributor",
+    "amount": 81400.0,
+    "issue_date": "2026-09-27",
+    "due_date": "2026-10-27",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0081",
+    "buyer_name": "Corniche Patisserie",
+    "buyer_tax_id": "640-115-298",
+    "buyer_sector": "cafe",
+    "amount": 28000.0,
+    "issue_date": "2026-10-04",
+    "due_date": "2026-10-19",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0090",
+    "buyer_name": "Heliopolis Hotel Group",
+    "buyer_tax_id": "377-905-214",
+    "buyer_sector": "hotel",
+    "amount": 132400.0,
+    "issue_date": "2026-07-29",
+    "due_date": "2026-09-12",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0091",
+    "buyer_name": "Heliopolis Hotel Group",
+    "buyer_tax_id": "377-905-214",
+    "buyer_sector": "hotel",
+    "amount": 119300.0,
+    "issue_date": "2026-08-22",
+    "due_date": "2026-10-06",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0092",
+    "buyer_name": "Heliopolis Hotel Group",
+    "buyer_tax_id": "377-905-214",
+    "buyer_sector": "hotel",
+    "amount": 150300.0,
+    "issue_date": "2026-09-11",
+    "due_date": "2026-10-26",
+    "paid_date": null
+  },
+  {
+    "invoice_number": "ANB-2026-0093",
+    "buyer_name": "Heliopolis Hotel Group",
+    "buyer_tax_id": "377-905-214",
+    "buyer_sector": "hotel",
+    "amount": 127400.0,
+    "issue_date": "2026-09-29",
+    "due_date": "2026-11-13",
+    "paid_date": null
+  }
+]

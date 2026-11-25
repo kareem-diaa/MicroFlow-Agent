@@ -1,0 +1,113 @@
+{
+  "passed": 12,
+  "total": 12,
+  "tests": [
+    {
+      "test": "No token -> 401",
+      "actor": "anonymous",
+      "request": "POST /api/score-credit",
+      "expected_status": 401,
+      "actual_status": 401,
+      "passed": true
+    },
+    {
+      "test": "Forged token -> 401",
+      "actor": "anonymous",
+      "request": "GET /api/audit-logs",
+      "expected_status": 401,
+      "actual_status": 401,
+      "passed": true
+    },
+    {
+      "test": "Advisor cannot upload data",
+      "actor": "advisor",
+      "request": "POST /api/upload-invoice",
+      "expected_status": 403,
+      "actual_status": 403,
+      "passed": true
+    },
+    {
+      "test": "Advisor cannot approve financing",
+      "actor": "advisor",
+      "request": "POST /api/financing/applications/1/approve",
+      "expected_status": 403,
+      "actual_status": 403,
+      "passed": true
+    },
+    {
+      "test": "Auditor cannot run credit scoring",
+      "actor": "auditor",
+      "request": "POST /api/score-credit?business_id=1",
+      "expected_status": 403,
+      "actual_status": 403,
+      "passed": true
+    },
+    {
+      "test": "Other tenant cannot read invoices",
+      "actor": "other_owner",
+      "request": "GET /api/invoices?business_id=1",
+      "expected_status": 403,
+      "actual_status": 403,
+      "passed": true
+    },
+    {
+      "test": "Other tenant cannot run agent",
+      "actor": "other_owner",
+      "request": "POST /api/agent/run?business_id=1",
+      "expected_status": 403,
+      "actual_status": 403,
+      "passed": true
+    },
+    {
+      "test": "XXE / entity XML rejected",
+      "actor": "owner",
+      "request": "POST /api/upload-invoice",
+      "expected_status": 422,
+      "actual_status": 422,
+      "passed": true
+    },
+    {
+      "test": "Oversized upload rejected",
+      "actor": "owner",
+      "request": "POST /api/upload-statement",
+      "expected_status": 413,
+      "actual_status": 413,
+      "passed": true
+    },
+    {
+      "test": "Double approval rejected",
+      "actor": "owner",
+      "request": "POST /api/financing/applications/1/approve",
+      "expected_status": 409,
+      "actual_status": 409,
+      "passed": true
+    },
+    {
+      "test": "Audit chain detects edited credit score",
+      "before": {
+        "valid": true,
+        "entries_checked": 23,
+        "head_hash": "79b27b670d7bcca2bcccf66f42d7b7b9d506b61fccace1ba1c23678a5432cc59"
+      },
+      "after_tamper": {
+        "valid": false,
+        "entries_checked": 23,
+        "broken_at_id": 12
+      },
+      "after_restore": {
+        "valid": true,
+        "entries_checked": 23,
+        "head_hash": "79b27b670d7bcca2bcccf66f42d7b7b9d506b61fccace1ba1c23678a5432cc59"
+      },
+      "passed": true
+    },
+    {
+      "test": "Brute force -> account locked",
+      "actor": "anonymous",
+      "request": "POST /api/auth/login (correct password after 5 failures)",
+      "expected_status": 423,
+      "actual_status": 423,
+      "passed": true
+    }
+  ]
+}

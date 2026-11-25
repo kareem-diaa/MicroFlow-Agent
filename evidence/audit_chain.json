@@ -1,0 +1,484 @@
+{
+  "verification": {
+    "valid": true,
+    "entries_checked": 30,
+    "head_hash": "6fe49c2a2c6589e6f8e0ce3a5aca7bafa03993184c5e15f8eb248a34cc371c0d"
+  },
+  "entries": [
+    {
+      "id": 1,
+      "ts": "2026-10-19T17:26:17.090223+00:00",
+      "actor": "system",
+      "role": "system",
+      "action": "system.seed_demo_tenants",
+      "business_id": null,
+      "details": {
+        "businesses": [
+          1,
+          2
+        ],
+        "users": 4
+      },
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "entry_hash": "fcdf664676e9cd56d3e3e3e38ecd728922ea793d1ab31c568237db664d172f31"
+    },
+    {
+      "id": 2,
+      "ts": "2026-10-19T17:26:17.322283+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "auth.login_success",
+      "business_id": 1,
+      "details": {},
+      "prev_hash": "fcdf664676e9cd56d3e3e3e38ecd728922ea793d1ab31c568237db664d172f31",
+      "entry_hash": "70003b06131001d7f8be7633df0f8e19592e181656da9da21e85d0902f460fd6"
+    },
+    {
+      "id": 3,
+      "ts": "2026-10-19T17:26:17.569578+00:00",
+      "actor": "user:3:advisor@microflow.example",
+      "role": "advisor",
+      "action": "auth.login_success",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "70003b06131001d7f8be7633df0f8e19592e181656da9da21e85d0902f460fd6",
+      "entry_hash": "4b9978a4e30361b73a8ec3418787e90360340359ad1e2469779c394196019b49"
+    },
+    {
+      "id": 4,
+      "ts": "2026-10-19T17:26:17.799115+00:00",
+      "actor": "user:4:auditor@bank.example",
+      "role": "auditor",
+      "action": "auth.login_success",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "4b9978a4e30361b73a8ec3418787e90360340359ad1e2469779c394196019b49",
+      "entry_hash": "e6749812cc8bd792e3ce3180002607be5cf026e3cbc7b3d39ce8a314059db8aa"
+    },
+    {
+      "id": 5,
+      "ts": "2026-10-19T17:26:17.989970+00:00",
+      "actor": "user:2:owner@delta.example",
+      "role": "sme_owner",
+      "action": "auth.login_success",
+      "business_id": 2,
+      "details": {},
+      "prev_hash": "e6749812cc8bd792e3ce3180002607be5cf026e3cbc7b3d39ce8a314059db8aa",
+      "entry_hash": "b81d3348fbfa329c5b4cda22ec7769928ef04217464b2792021d63d88d6b9247"
+    },
+    {
+      "id": 6,
+      "ts": "2026-10-19T17:26:18.027831+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.statement",
+      "business_id": 1,
+      "details": {
+        "file": "statement_1_apr-jul_2026.csv",
+        "sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48",
+        "rows": 172,
+        "categories": {
+          "ipn_inflow": 78,
+          "supplier": 39,
+          "customer_payment": 34,
+          "payroll": 3,
+          "rent": 3,
+          "loan": 3,
+          "utility": 9,
+          "tax": 3
+        }
+      },
+      "prev_hash": "b81d3348fbfa329c5b4cda22ec7769928ef04217464b2792021d63d88d6b9247",
+      "entry_hash": "43fb0c333af8b9a8da1a595a7092a930ac43f225362b9dfe41944ae623f8fa6b"
+    },
+    {
+      "id": 7,
+      "ts": "2026-10-19T17:26:18.065948+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.statement",
+      "business_id": 1,
+      "details": {
+        "file": "statement_2_jul-oct_2026.pdf",
+        "sha256": "b9b0dad98b9876f39ae4adab2dc2a8b3609f141de036ad3e3007383a35a0dae3",
+        "rows": 175,
+        "categories": {
+          "ipn_inflow": 79,
+          "customer_payment": 36,
+          "supplier": 39,
+          "payroll": 3,
+          "rent": 3,
+          "loan": 3,
+          "utility": 9,
+          "tax": 3
+        }
+      },
+      "prev_hash": "43fb0c333af8b9a8da1a595a7092a930ac43f225362b9dfe41944ae623f8fa6b",
+      "entry_hash": "6b8887e99958ce362b080a93893281131e58bf1061be28a2e9978b998d2a3cdc"
+    },
+    {
+      "id": 8,
+      "ts": "2026-10-19T17:26:18.075972+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.invoices",
+      "business_id": 1,
+      "details": {
+        "file": "invoices_open.json",
+        "sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+        "added": 20,
+        "duplicates_skipped": []
+      },
+      "prev_hash": "6b8887e99958ce362b080a93893281131e58bf1061be28a2e9978b998d2a3cdc",
+      "entry_hash": "a20055c84a23a9aa58ce7a917773cef2aafd36050860e0f02d09ab42516916e5"
+    },
+    {
+      "id": 9,
+      "ts": "2026-10-19T17:26:18.092710+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.invoices",
+      "business_id": 1,
+      "details": {
+        "file": "invoices_paid_history.xml",
+        "sha256": "c5f94f0985baba503bf9af431e5296c71ad626a16d8c0bce4a0f35e09e810eeb",
+        "added": 73,
+        "duplicates_skipped": []
+      },
+      "prev_hash": "a20055c84a23a9aa58ce7a917773cef2aafd36050860e0f02d09ab42516916e5",
+      "entry_hash": "d3163bb242309009a0a40aea757d8a18dcef9a46cdbf10ed29e9cc930c2c84ea"
+    },
+    {
+      "id": 10,
+      "ts": "2026-10-19T17:26:18.100334+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.invoices",
+      "business_id": 1,
+      "details": {
+        "file": "invoice_single_open.pdf",
+        "sha256": "ccd9dcef066ff72d5801e0b3464e92f860d86c6da182c5397cc967e6c6ee83cc",
+        "added": 1,
+        "duplicates_skipped": []
+      },
+      "prev_hash": "d3163bb242309009a0a40aea757d8a18dcef9a46cdbf10ed29e9cc930c2c84ea",
+      "entry_hash": "7fe580ba424ed7487e3bfb56056e2f299aa05448073c879a7b3e9e2da7f4236d"
+    },
+    {
+      "id": 11,
+      "ts": "2026-10-19T17:26:18.113121+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.statement",
+      "business_id": 1,
+      "details": {
+        "file": "informal_receipts.txt",
+        "sha256": "6739f3528558f3b47c61a26b75d2d7e515bb94e3011266723d4ff65048e0816b",
+        "rows": 4,
+        "categories": {
+          "other_in": 2,
+          "other_out": 2
+        }
+      },
+      "prev_hash": "7fe580ba424ed7487e3bfb56056e2f299aa05448073c879a7b3e9e2da7f4236d",
+      "entry_hash": "412dee9a2a6a426ef42ba6cf13701783949fada7638b4626f4da1624ee0a701c"
+    },
+    {
+      "id": 12,
+      "ts": "2026-10-19T17:26:18.198848+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ai.credit_score",
+      "business_id": 1,
+      "details": {
+        "score": 57.9,
+        "grade": "C",
+        "model_version": "delay-xgb-24d9712c55",
+        "dossier_sha256": "25a8ce3bdf1e4052ba8add781f71ac55be31614dad96c8778d55da8f1b2662da"
+      },
+      "prev_hash": "412dee9a2a6a426ef42ba6cf13701783949fada7638b4626f4da1624ee0a701c",
+      "entry_hash": "9eec10eb596e0b4d2fe14c83eb1d3b7afc66315536093359ce628c9e82598fa1"
+    },
+    {
+      "id": 13,
+      "ts": "2026-10-19T17:26:18.205745+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ai.cashflow_forecast",
+      "business_id": 1,
+      "details": {
+        "funding_gap": 391649.32,
+        "min_base": -80433.46,
+        "alerts": [
+          "insolvency_risk",
+          "insolvency_risk",
+          "low_cash_buffer",
+          "buyer_concentration",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice",
+          "overdue_invoice"
+        ]
+      },
+      "prev_hash": "9eec10eb596e0b4d2fe14c83eb1d3b7afc66315536093359ce628c9e82598fa1",
+      "entry_hash": "cafb65b4a4afda7f0b672b327ab7180b4380505668c03f51cd3e6ff8217e0a6e"
+    },
+    {
+      "id": 14,
+      "ts": "2026-10-19T17:26:18.221124+00:00",
+      "actor": "agent:microflow",
+      "role": "agent",
+      "action": "agent.financing_drafted",
+      "business_id": 1,
+      "details": {
+        "application_id": 1,
+        "offer_id": "NF-FACT-01",
+        "invoice_ids": [
+          3,
+          8,
+          15,
+          20
+        ],
+        "funds": 414630.0,
+        "cost": 17331.6,
+        "triggered_by": "user:1:owner@alnour.example"
+      },
+      "prev_hash": "cafb65b4a4afda7f0b672b327ab7180b4380505668c03f51cd3e6ff8217e0a6e",
+      "entry_hash": "39318a23a250d224bd71a191f6d53ca598016875ad14b0fe24abf196194953ab"
+    },
+    {
+      "id": 15,
+      "ts": "2026-10-19T17:26:18.223487+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "agent.run",
+      "business_id": 1,
+      "details": {
+        "steps": [
+          "observe",
+          "analyse",
+          "decide",
+          "act",
+          "guardrail"
+        ],
+        "actions": [
+          "draft_financing_application",
+          "request_advisor_review",
+          "publish_alerts"
+        ],
+        "decision_sha256": "07d736226798b202b72e2aa678a6009dfad44d0e373a6be3b300ab9cbb4bb7cd"
+      },
+      "prev_hash": "39318a23a250d224bd71a191f6d53ca598016875ad14b0fe24abf196194953ab",
+      "entry_hash": "c6017d56bee5b6cb9f0592393e63d4dc656015e001fbd967f4c60b64f0069cd4"
+    },
+    {
+      "id": 16,
+      "ts": "2026-10-19T17:26:18.240652+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "financing.owner_approved_and_submitted",
+      "business_id": 1,
+      "details": {
+        "application_id": 1,
+        "provider_reference": "SBX-F4025422B7",
+        "decision": "approved"
+      },
+      "prev_hash": "c6017d56bee5b6cb9f0592393e63d4dc656015e001fbd967f4c60b64f0069cd4",
+      "entry_hash": "de687a8ef51f18d5366c6ba569b32342a96ffc3a29b9a149901afd558a5435a7"
+    },
+    {
+      "id": 17,
+      "ts": "2026-10-19T17:26:18.287241+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "agent.question",
+      "business_id": 1,
+      "details": {
+        "intent": "runway",
+        "question_sha256": "c29e609829b62f8b43818be4697bb1390b529113216952fbcc9edab21412dd5f"
+      },
+      "prev_hash": "de687a8ef51f18d5366c6ba569b32342a96ffc3a29b9a149901afd558a5435a7",
+      "entry_hash": "40079f8016e540a81e03fbc340eb938cccf693bd53a0281856de5f0ee74463d3"
+    },
+    {
+      "id": 18,
+      "ts": "2026-10-19T17:26:18.294757+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "agent.question",
+      "business_id": 1,
+      "details": {
+        "intent": "score",
+        "question_sha256": "030ca3b1bf8433ba80fe99a902da8a1e0a5b6b3cc763e32c3740fc166243cfba"
+      },
+      "prev_hash": "40079f8016e540a81e03fbc340eb938cccf693bd53a0281856de5f0ee74463d3",
+      "entry_hash": "b767357e70ca833c8a4006cfc19051a76747f489fb08e0611d4dd929546b6e21"
+    },
+    {
+      "id": 19,
+      "ts": "2026-10-19T17:26:18.302436+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "agent.question",
+      "business_id": 1,
+      "details": {
+        "intent": "late",
+        "question_sha256": "1ac4f924877fe550c2ca0b1e6a456f9563a59948967d2f1c8576555206b4c393"
+      },
+      "prev_hash": "b767357e70ca833c8a4006cfc19051a76747f489fb08e0611d4dd929546b6e21",
+      "entry_hash": "28f697c1e1803de058afdb3c163cfb7c31100e20b193d3130af35612dc275587"
+    },
+    {
+      "id": 20,
+      "ts": "2026-10-19T17:26:18.309621+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "agent.question",
+      "business_id": 1,
+      "details": {
+        "intent": "financing",
+        "question_sha256": "23ef5345cd3c955796562dbf63b246c98c0c862f57db3ccfba12e9c5a77c4aac"
+      },
+      "prev_hash": "28f697c1e1803de058afdb3c163cfb7c31100e20b193d3130af35612dc275587",
+      "entry_hash": "9ffc426ed03a2541befcd1a68a5d0d569de20820f9441106e6f7452de4610203"
+    },
+    {
+      "id": 21,
+      "ts": "2026-10-19T17:26:18.315904+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "agent.question",
+      "business_id": 1,
+      "details": {
+        "intent": "runway",
+        "question_sha256": "cea497a5377c2c57dfc81c50e3ef7f1a90d6b9e31d59f1f0fdd4ea5c421ee016"
+      },
+      "prev_hash": "9ffc426ed03a2541befcd1a68a5d0d569de20820f9441106e6f7452de4610203",
+      "entry_hash": "545ada5d8ac4c0adb07257d63f03585dbbbc267b3fd9d85dbe079e6e0a8f3659"
+    },
+    {
+      "id": 22,
+      "ts": "2026-10-19T17:26:18.324215+00:00",
+      "actor": "user:4:auditor@bank.example",
+      "role": "auditor",
+      "action": "credit.dossier_viewed",
+      "business_id": 1,
+      "details": {
+        "credit_score_id": 1
+      },
+      "prev_hash": "545ada5d8ac4c0adb07257d63f03585dbbbc267b3fd9d85dbe079e6e0a8f3659",
+      "entry_hash": "f6bf9946d7ce66369369fbd11740ac9d4c2006068d59d14d787299de82a958d5"
+    },
+    {
+      "id": 23,
+      "ts": "2026-10-19T17:26:18.358624+00:00",
+      "actor": "user:1:owner@alnour.example",
+      "role": "sme_owner",
+      "action": "ingest.invoice_rejected",
+      "business_id": 1,
+      "details": {
+        "file": "evil.xml",
+        "error": "XML with DTD or entity declarations is not accepted"
+      },
+      "prev_hash": "f6bf9946d7ce66369369fbd11740ac9d4c2006068d59d14d787299de82a958d5",
+      "entry_hash": "79b27b670d7bcca2bcccf66f42d7b7b9d506b61fccace1ba1c23678a5432cc59"
+    },
+    {
+      "id": 24,
+      "ts": "2026-10-19T17:26:18.584405+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_failed",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "79b27b670d7bcca2bcccf66f42d7b7b9d506b61fccace1ba1c23678a5432cc59",
+      "entry_hash": "c80ba2416a4f1efeaa77c37a1abeaa2aed6acd370b9456d22b16fea3cd65c5d1"
+    },
+    {
+      "id": 25,
+      "ts": "2026-10-19T17:26:18.773805+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_failed",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "c80ba2416a4f1efeaa77c37a1abeaa2aed6acd370b9456d22b16fea3cd65c5d1",
+      "entry_hash": "de60398c85b59f5cd58f6eda630aaf3995c932568814cc55cb06962afcd8cd51"
+    },
+    {
+      "id": 26,
+      "ts": "2026-10-19T17:26:18.952634+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_failed",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "de60398c85b59f5cd58f6eda630aaf3995c932568814cc55cb06962afcd8cd51",
+      "entry_hash": "a4ec3824dcf15632d50c935d30834c000aa9252f02fb55bc78e5be5e02363fab"
+    },
+    {
+      "id": 27,
+      "ts": "2026-10-19T17:26:19.131172+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_failed",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "a4ec3824dcf15632d50c935d30834c000aa9252f02fb55bc78e5be5e02363fab",
+      "entry_hash": "50b6b5c8692a0811af18c41690b3d47d4330ab31cd578a26311ff2aac188f17a"
+    },
+    {
+      "id": 28,
+      "ts": "2026-10-19T17:26:19.314924+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_failed",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "50b6b5c8692a0811af18c41690b3d47d4330ab31cd578a26311ff2aac188f17a",
+      "entry_hash": "eec48550c30694b48a777f1004acb158511c1762be739a17e3461d3d02a4a635"
+    },
+    {
+      "id": 29,
+      "ts": "2026-10-19T17:26:19.320735+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_blocked_locked",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "eec48550c30694b48a777f1004acb158511c1762be739a17e3461d3d02a4a635",
+      "entry_hash": "c8ca24c15b29cb617af67618a555398ebbc7128da901d047652e74ecd583cd95"
+    },
+    {
+      "id": 30,
+      "ts": "2026-10-19T17:26:19.325822+00:00",
+      "actor": "owner@delta.example",
+      "role": "anonymous",
+      "action": "auth.login_blocked_locked",
+      "business_id": null,
+      "details": {},
+      "prev_hash": "c8ca24c15b29cb617af67618a555398ebbc7128da901d047652e74ecd583cd95",
+      "entry_hash": "6fe49c2a2c6589e6f8e0ce3a5aca7bafa03993184c5e15f8eb248a34cc371c0d"
+    },
+    {
+      "id": 31,
+      "ts": "2026-10-19T17:26:19.333121+00:00",
+      "actor": "user:4:auditor@bank.example",
+      "role": "auditor",
+      "action": "audit.chain_verified",
+      "business_id": null,
+      "details": {
+        "valid": true,
+        "entries_checked": 30,
+        "head_hash": "6fe49c2a2c6589e6f8e0ce3a5aca7bafa03993184c5e15f8eb248a34cc371c0d"
+      },
+      "prev_hash": "6fe49c2a2c6589e6f8e0ce3a5aca7bafa03993184c5e15f8eb248a34cc371c0d",
+      "entry_hash": "ec752afdccfda5ee1fd8490d1790c74a6739b3a1602c91b194ec84a3668ad656"
+    }
+  ]
+}

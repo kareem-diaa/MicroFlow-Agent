@@ -1,0 +1,614 @@
+{
+  "businesses": {
+    "total_rows": 2,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "name": "Al-Nour Bakery Supplies",
+        "sector": "food wholesale",
+        "city": "Cairo",
+        "commercial_register_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "business.commercial_register",
+          "wk": "MY+Wk1ppm2K8ZW+0sUuLm6c+k1Oy2ufw9geceMmIAYEFZ6CXn0ezGxcMZsgcw4Hy",
+          "wn": "epaBThz/ipOfPFUj",
+          "n": "/Czke6FwjoUBxDRp",
+          "ct": "Uq2zSS3BGDll5lsTnVxaw8PuBhw2Yow6Zzfytosqaw=="
+        },
+        "tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "business.tax_id",
+          "wk": "d4hCFqE4zJXakAGXkT/18ZnGmQuAQzWO/+8XxtZeddja1PZ+Y/dqadH4DGigX9uF",
+          "wn": "nzbX6k6xhKQ84A74",
+          "n": "kBJBMVHHXdJo0rwN",
+          "ct": "M0tBoO8bEVK2xtzqH8f4Botz95AjMgDS6dAH43A="
+        },
+        "created_at": "2026-10-19 17:26:16.804414"
+      },
+      {
+        "id": 2,
+        "name": "Delta Textiles Workshop",
+        "sector": "textiles",
+        "city": "Mahalla",
+        "commercial_register_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "business.commercial_register",
+          "wk": "+0vbLV05vbsKJHP482VJwt/x+d1+8mqa90liHQs8v31+jqZIybVDUQHa0kcf+6ca",
+          "wn": "zQbeHpkqUD3LPiY4",
+          "n": "1tYSmxTgYByKzd/g",
+          "ct": "l+DRsCRsehmJFjqup9PmK4z2FKIgPRXSijhRhV5kHA=="
+        },
+        "tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "business.tax_id",
+          "wk": "R7KlT35onbew1LQvPH8zJDFW2jAc7oms85EziSm97IQxp0MXFd8/u442htXwRI/G",
+          "wn": "1Rjnk4L4JeCeRefQ",
+          "n": "NSMfAosUU+YSKCc2",
+          "ct": "UQ8Q91MhjSYCCsjRAqImteEc8kv8mj/T+xmWNnw="
+        },
+        "created_at": "2026-10-19 17:26:16.804422"
+      }
+    ]
+  },
+  "users": {
+    "total_rows": 4,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "email": "owner@alnour.example",
+        "full_name": "Mona Hassan (owner)",
+        "role": "sme_owner",
+        "password_hash": "pbkdf2_sha256$600000$RoO...(truncated)",
+        "business_id": 1,
+        "assigned_business_ids": "[]",
+        "failed_logins": 0,
+        "locked_until": null,
+        "is_active": 1
+      },
+      {
+        "id": 2,
+        "email": "owner@delta.example",
+        "full_name": "Tarek Fawzy (owner)",
+        "role": "sme_owner",
+        "password_hash": "pbkdf2_sha256$600000$RoO...(truncated)",
+        "business_id": 2,
+        "assigned_business_ids": "[]",
+        "failed_logins": 0,
+        "locked_until": "2026-10-19 17:41:19.139014",
+        "is_active": 1
+      },
+      {
+        "id": 3,
+        "email": "advisor@microflow.example",
+        "full_name": "Advisor (assigned to Al-Nour)",
+        "role": "advisor",
+        "password_hash": "pbkdf2_sha256$600000$RoO...(truncated)",
+        "business_id": null,
+        "assigned_business_ids": "[1]",
+        "failed_logins": 0,
+        "locked_until": null,
+        "is_active": 1
+      },
+      {
+        "id": 4,
+        "email": "auditor@bank.example",
+        "full_name": "Bank Auditor",
+        "role": "auditor",
+        "password_hash": "pbkdf2_sha256$600000$RoO...(truncated)",
+        "business_id": null,
+        "assigned_business_ids": "[1, 2]",
+        "failed_logins": 0,
+        "locked_until": null,
+        "is_active": 1
+      }
+    ]
+  },
+  "invoices": {
+    "total_rows": 94,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "business_id": 1,
+        "invoice_number": "ANB-2026-0010",
+        "buyer_ref": "4fe42f334a6e52d2a190416cacb1549a",
+        "buyer_name_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_name",
+          "wk": "gNyg+nV8tzvqsqpf4twD0qmrRyKrcoxLxPsQEqNyCkYqfiYswIe3TeWMidIWpI4e",
+          "wn": "2ArPOJlk3ZLITS3G",
+          "n": "z8oYDel1ZyHszwfN",
+          "ct": "6wX+fSX+SZPTeMAKMUYJq6Kpc1l2ISoPrfUvVdPvLGBu"
+        },
+        "buyer_tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_tax_id",
+          "wk": "kJxvclRJBMghms7ceifOpaGVWixxkK0HEpOZb1pSdcWPw/Rin/aaQle2nO7EDsb6",
+          "wn": "h7LyVyeED+73TKY6",
+          "n": "s6kKGNx7qm1q1Oic",
+          "ct": "+gsHXvgJhtNSNhxx7kGtCytkPdxtdhzubyic8/c="
+        },
+        "buyer_sector": "hotel",
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.amount",
+          "wk": "w5dQtNELqS8ptgTas3mYQWyb6R2T4tm3GvPuWl6vuYZW3BZfO1MnS6xADuw2C7so",
+          "wn": "h1lsAa9vFWhBMJSy",
+          "n": "uSEzX8wPsmL3I97s",
+          "ct": "p86ZPfSD+RKAbJBru+FnLkTqLxWMKWKc"
+        },
+        "currency": "EGP",
+        "issue_date": "2026-08-06",
+        "due_date": "2026-09-20",
+        "paid_date": null,
+        "status": "open",
+        "source": "sample",
+        "source_sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+        "created_at": "2026-10-19 17:26:18.072944"
+      },
+      {
+        "id": 2,
+        "business_id": 1,
+        "invoice_number": "ANB-2026-0011",
+        "buyer_ref": "4fe42f334a6e52d2a190416cacb1549a",
+        "buyer_name_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_name",
+          "wk": "sD3apzizvnXzvI5n5JnQaOYQTJ6I5CiFIUyL9tqapdP8HXlE//jafV0lcGMSnl7F",
+          "wn": "5DDId5IfUcbApH6G",
+          "n": "vpGEQlISJc5x0T0W",
+          "ct": "bPzELQz4vVjKnw0uylFstu6SD/srBQEiIIq6rXmM6Y3r"
+        },
+        "buyer_tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_tax_id",
+          "wk": "20PM1anqc7hpAkSsZQ2PuPwOMieT0nWugxmP6ATqfRosIzEbfYliTb5zWmKGqzoX",
+          "wn": "Zgn/+XQ1sklaEl1/",
+          "n": "w32QykSIeSRzkn1T",
+          "ct": "7ovdckSdjuDgYf608G5gJSVB6xFFosE0p8tQYFU="
+        },
+        "buyer_sector": "hotel",
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.amount",
+          "wk": "V7F57m7t4LIKB2Enyiwp9QT5/kNd/DGpjSvXcsWOPwxky37RoW3/wwl3BJHum/WE",
+          "wn": "cKabKgHOud4X9qsc",
+          "n": "Ekrjn3R2S6JFNwdv",
+          "ct": "PTvlkbe0N4OJ3I6lMd/deYuli38ciq2/"
+        },
+        "currency": "EGP",
+        "issue_date": "2026-08-29",
+        "due_date": "2026-10-13",
+        "paid_date": null,
+        "status": "open",
+        "source": "sample",
+        "source_sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+        "created_at": "2026-10-19 17:26:18.072947"
+      },
+      {
+        "id": 3,
+        "business_id": 1,
+        "invoice_number": "ANB-2026-0012",
+        "buyer_ref": "4fe42f334a6e52d2a190416cacb1549a",
+        "buyer_name_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_name",
+          "wk": "GO3mX+pc3FpoSNXl6l54eJJJKJ0UzmvlPkBcUZXmtIk6a83oAGVry9lziMgCR2Xz",
+          "wn": "RF4GGecBFmDmV/yQ",
+          "n": "eZ3guWKZTFQ13zVm",
+          "ct": "WDJdog9STXAjMP0m3qYFxtzEbSZnqzoNMCjsC8rvspqW"
+        },
+        "buyer_tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_tax_id",
+          "wk": "yQfKGkHQhMn8kuBuurlTGQJLM2qOjVL6Rb810lRX72BOJl/98fLqY6tj546IwSNA",
+          "wn": "t+/lvPRBMpByMecP",
+          "n": "AIXV9/NV+TAEvMxV",
+          "ct": "e/ZUhnIcgttxQgQ1gCz/35XN8vNuS8GTozkuzKM="
+        },
+        "buyer_sector": "hotel",
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.amount",
+          "wk": "QPXzZRB4B5/cigR9a5uN7+2uQhFKaPG3Zgm4+6OVdCCo6DHy8Jilpj0GglXp3O3q",
+          "wn": "NLBvEIGcgm+Y0yrk",
+          "n": "TfgkIrkGXt+tRSWu",
+          "ct": "xHS2mjXn3HLp4yzK3IAm2pDhhtV6Ux2I"
+        },
+        "currency": "EGP",
+        "issue_date": "2026-09-20",
+        "due_date": "2026-11-04",
+        "paid_date": null,
+        "status": "financed",
+        "source": "sample",
+        "source_sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+        "created_at": "2026-10-19 17:26:18.072948"
+      },
+      {
+        "id": 4,
+        "business_id": 1,
+        "invoice_number": "ANB-2026-0013",
+        "buyer_ref": "4fe42f334a6e52d2a190416cacb1549a",
+        "buyer_name_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_name",
+          "wk": "Lys3fFjU9n0SRv5u7H7Y2bKDQ+ZeGu5so7er8rAqKcUtYFKSurtIjyNw50YFi7QU",
+          "wn": "kybu1BNtw3rzM4uG",
+          "n": "3GHjTtTec6zS2IRF",
+          "ct": "5ezFX3rm426HVzWXL9dfYwBWhFSMM8cWSRTLJUaakFAa"
+        },
+        "buyer_tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_tax_id",
+          "wk": "efG1/pJofxTykGrbU/TVz6kDlR91FCurIiYNKw2SSOgP7ihN/wi8F/Fm4VRjmHO0",
+          "wn": "aoQy0aCUIy1d1vHO",
+          "n": "hiTy6FgOn/enFuyO",
+          "ct": "W4lPrXpB4QyEjITQE8SEitcA+VhoP8NHiCB91s8="
+        },
+        "buyer_sector": "hotel",
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.amount",
+          "wk": "jNLQdLkTQy3+3IbFXj+p8kXf3nFhZvyC8sTv+G5jdx++0TuLCfw+RBH2PFFvfMR9",
+          "wn": "lI8ZAkxShs6PtrZ6",
+          "n": "r0qvKV6zDHdZy952",
+          "ct": "gMA0xP5Zi45Qoxh2CDaesuwlEXClsixx"
+        },
+        "currency": "EGP",
+        "issue_date": "2026-10-10",
+        "due_date": "2026-11-24",
+        "paid_date": null,
+        "status": "open",
+        "source": "sample",
+        "source_sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+        "created_at": "2026-10-19 17:26:18.072949"
+      },
+      {
+        "id": 5,
+        "business_id": 1,
+        "invoice_number": "ANB-2026-0026",
+        "buyer_ref": "b77568e74ff947979fcd70c2f9d06071",
+        "buyer_name_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_name",
+          "wk": "azlzv6miLzgWKspC0qY/CL7fWuHBjz2bYqwVYVxOAeKQ5TeXEm0HBC1nTUilrXHx",
+          "wn": "SOSL/pdp+O9LBS4e",
+          "n": "rCr+KRU1iw2CrWBn",
+          "ct": "vmlLFkAzt1Hp2JAPckuMgv9GYA25Gwy4p1LOy2f8R3O3KfH2R/hWra1N"
+        },
+        "buyer_tax_id_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.buyer_tax_id",
+          "wk": "mqRw0lUo98Vi3ax2ZdR4zF9hyh+OXJ91awosVigrW0IZwzS6ximx4nQD/nJeEC0Y",
+          "wn": "T+N29PAkp4wRn/JG",
+          "n": "3H6ORs/gQq/5zQSm",
+          "ct": "tNzIFrx0PFfyMIJZReDFKDLXqUS5ZQ8bz0hPTRE="
+        },
+        "buyer_sector": "supermarket",
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "invoice.amount",
+          "wk": "huiZe5qwSNMoCvYiXvVrqyF0xM52Pvwt9YEpIgQKz0KNaj9v5/CGl68gHWa/wvoB",
+          "wn": "E2Vhqb0xu80lodmV",
+          "n": "gRJuvgsVFFa6JK6x",
+          "ct": "RmJ+BGg2+l8LGHFQYWdaE6pwzGODakZY"
+        },
+        "currency": "EGP",
+        "issue_date": "2026-09-02",
+        "due_date": "2026-10-02",
+        "paid_date": null,
+        "status": "open",
+        "source": "sample",
+        "source_sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+        "created_at": "2026-10-19 17:26:18.072949"
+      }
+    ]
+  },
+  "transactions": {
+    "total_rows": 351,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "business_id": 1,
+        "txn_date": "2026-04-19",
+        "category": "ipn_inflow",
+        "direction": "credit",
+        "description_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.description",
+          "wk": "oHRK83fXNEufSsEv92gvOCDP2VsZXmTBa60uuENU7Y8F8rXRu9dnPZ3+EXiouf7Q",
+          "wn": "DUZk9Hr0n6rSK8Xl",
+          "n": "IRwQDhbbsWFtPLXp",
+          "ct": "crJrdLrZHkgZuTjeqskRLvrWB8HyKOEbVl0eKaFrq8xb84NGpvYtEDxs1EOG7qBx"
+        },
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.amount",
+          "wk": "gR6ibXdXG/EITiNaEHdwnHnmV0b4gPbUL4OqVGXUSBtphkbpgR0ESGgCMgEI8Lci",
+          "wn": "2wORvtzPIXu6fw0V",
+          "n": "0DRgRhSMWW3KJcvI",
+          "ct": "x9Fb4zalTVvUrAuwsjmiPwX6TsFH9Q=="
+        },
+        "balance_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.balance",
+          "wk": "BfkLiExtlYOLG1P6skSkn8nDaF4zAvPbH2sXaLt6r24nP2qRr8FH3Xfom8jZ5mE5",
+          "wn": "iFEljguhsEPqXiJI",
+          "n": "QTPnRdK5uZNMt0sC",
+          "ct": "E9M2OGxpEqQnjJ9h0b/q0axQaPVqcMpn"
+        },
+        "source_sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48"
+      },
+      {
+        "id": 2,
+        "business_id": 1,
+        "txn_date": "2026-04-20",
+        "category": "ipn_inflow",
+        "direction": "credit",
+        "description_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.description",
+          "wk": "JOyc0bNA6tVJhAFNdgQNj+dGhczWU/tQqtl9YiRekix57lzsPyA9z0yIutwsR6/X",
+          "wn": "tk1Qq24Al9dIeajv",
+          "n": "/8vvDJv/E6+UUoiD",
+          "ct": "yGmSPjjCQ7nSzNsHDq8s8HPr1EQ/O/MG9aWuj8LLrBP/QKol2EDHyiCM44rayQ2S"
+        },
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.amount",
+          "wk": "nfygVHMf3HSdsLLsHO8y0U4jSYAqNGE9Dwec+38g4RywUVMbDypUdpaKCOh3v2B9",
+          "wn": "frOjWk2BldfWK3ND",
+          "n": "kO9abdsemA2S03tL",
+          "ct": "nhKYjI9txd/sFNsrgBSQftbbQP6c5Xo="
+        },
+        "balance_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.balance",
+          "wk": "nX46kPwyhZDUQFeZ6KrDWtv2YOc84X98jWXP15Ci6vnY3tenGk0cAji58lA4g2kO",
+          "wn": "pabbNuQK4mq/GVPO",
+          "n": "Z5KuGDTMQ+R+7ffu",
+          "ct": "3IgNC7J13zXH2D8Xp8pF0/n23H1oSYgF"
+        },
+        "source_sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48"
+      },
+      {
+        "id": 3,
+        "business_id": 1,
+        "txn_date": "2026-04-20",
+        "category": "supplier",
+        "direction": "debit",
+        "description_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.description",
+          "wk": "xNsewmjweK1xorjnUh4l+gdJJH1SEnB+OubdtJU7e8CT22cB58wykDafsb7hK4JH",
+          "wn": "4h+JUF7u7B/aRtFv",
+          "n": "FsO8U4OFvKWqW0qV",
+          "ct": "Tj0Nl2rGPiSb5zdZ9ZKv/MLLf+QT42UhfvbDEkM9xPyCNKZKxuDCZF7y+WWAGJBph6ONa4oSiinEOA=="
+        },
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.amount",
+          "wk": "39eqAV9u+xs75qBTKf2CC0PlkskJEvB9KDsefD3OVBWYK58doMtJ9ROgyUjTmuLO",
+          "wn": "X4ugtuJ5j4/W7DHo",
+          "n": "uzc/6ioc2bgFBaDh",
+          "ct": "40PnaOb+ewMfJVos4jzBbGe/EZCja2BB"
+        },
+        "balance_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.balance",
+          "wk": "38vz+fyNUTESw/ME1/fb9avN93vtMqmdoPeD8Nvq6/7uq+SKEUKmNclivBlh1yiG",
+          "wn": "7s2zVD//cscUMUz7",
+          "n": "2AoLlkwpPjgAYum4",
+          "ct": "ST7ZXCw0dr8sIdPjSHhYdqSAr8UE4dtl"
+        },
+        "source_sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48"
+      },
+      {
+        "id": 4,
+        "business_id": 1,
+        "txn_date": "2026-04-21",
+        "category": "ipn_inflow",
+        "direction": "credit",
+        "description_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.description",
+          "wk": "GQu6V0387jc16iZ+GCzG2tYoWmo32v60FPBleQDSiBNTSUcqkzbi3dQyPNi9IsoK",
+          "wn": "Lqi7JRaPbzQWeTAt",
+          "n": "DW5frxHNVu3WwKCH",
+          "ct": "aj+Gx+xRnpp/zFOfHHV6GSmJI1enBErzkCqJT2R4l3+IUDo8vhbpJzZMfDw5TQLY"
+        },
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.amount",
+          "wk": "vSoPFuCuw2eHDzlmyUZeqLXLqfeC6CNUSORWzr9rDGppDLGhIjxQJQyiQ3VmlFOm",
+          "wn": "P60ua+hUhpFyzhRF",
+          "n": "ERLg7s4ElGmNmN2V",
+          "ct": "MfwczeTsnM3dF/eE3dqoecfLwAOeAQ=="
+        },
+        "balance_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.balance",
+          "wk": "UKGtSDi4v5aIDTvmZbrIxzQaBWEQlKDyMc4fIGE6s++w8MO4cSzCrwZhtGJyNEkX",
+          "wn": "RrEjP8NKB6pkw/F6",
+          "n": "7Xs65yQ8Sme6FSgO",
+          "ct": "1rPsi4yOGLV/YVhcfQ/ZB+I7QXdaXA5L"
+        },
+        "source_sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48"
+      },
+      {
+        "id": 5,
+        "business_id": 1,
+        "txn_date": "2026-04-22",
+        "category": "ipn_inflow",
+        "direction": "credit",
+        "description_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.description",
+          "wk": "93rdoNsL/vvHPftrWQenlOFXOOHAU23RbVZ/RAI5kyYyVmd+WJ6SYOqWVT9T+d3C",
+          "wn": "Yyw9l07p7fRTurfB",
+          "n": "tOC08xPUSqqv68Mi",
+          "ct": "43RZ4hv2WQS4dMhjIeXcaPBfyrs85okhJ0ZQ50HTQ8zfWqCl/z2PoUcQ6JQ+B/8u"
+        },
+        "amount_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.amount",
+          "wk": "Ypto4xPE5jXa+ftz/imydEXdsduYYFPJMoyX2AfnEueW8Q0SqYmea47Hi6J3VGeb",
+          "wn": "H0l8aNFVDbdxvyh1",
+          "n": "kTW+/D9ANPAB8Bpq",
+          "ct": "NTuttGLLC4DQJEbDiI6J/cVZoXDgyao="
+        },
+        "balance_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "txn.balance",
+          "wk": "uDjw9lDosk475K9Sidvx2AzZPjQqiS8ZRAgVsKCDSDAsVxPlDCdHMplKTs2spTMO",
+          "wn": "rXq47zJww4NaVw4/",
+          "n": "7U/wU9tpGV/RDKO2",
+          "ct": "huixjJ7ZAd4MAQ6U7hZAmJLqT+QFfiH3"
+        },
+        "source_sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48"
+      }
+    ]
+  },
+  "credit_scores": {
+    "total_rows": 1,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "business_id": 1,
+        "score": 57.9,
+        "grade": "C",
+        "dossier_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "credit.dossier",
+          "wk": "KIgXPA8OqjoffCZPm/+JdeXbHwOLPJLW3xp+fh+BLXjKPbGgxRu0NlYJDxnxugrX",
+          "wn": "Yth4IeZw7OQjByy7",
+          "n": "3E1TUuLhuGmvajJa",
+          "ct": "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"
+        },
+        "model_version": "delay-xgb-24d9712c55",
+        "created_at": "2026-10-19 17:26:18.195508"
+      }
+    ]
+  },
+  "financing_applications": {
+    "total_rows": 1,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "business_id": 1,
+        "offer_id": "NF-FACT-01",
+        "provider": "NileFactor (sandbox NBFI)",
+        "product": "invoice_factoring",
+        "invoice_ids": "[3, 8, 15, 20]",
+        "payload_enc": {
+          "v": 1,
+          "alg": "AES-256-GCM",
+          "ctx": "financing.payload",
+          "wk": "MeieXiYbWMb+PMlOW11O/ILoszqBCsS+WdOPV6pxQQwGh3raWr6ahBxfoYkF7RfF",
+          "wn": "4kHVTlTD5t/ad8Gw",
+          "n": "gVDe2SanV9xF/zNq",
+          "ct": "VnnBoF7p7EPiL6ud5Xr1N4Pwdazou9dqS6SvGEn1887Up9I5DXg0BEoGKOZ6fji+ngq/V0doCG6loM/7w1z6g0Bb0csPqSE3Xan0QWUPRLuAVqTFqNuT0lzniaFuaAAoDwCtmd3BwdqM4Q+GzRLKXVmHxihyoJU+6+L7BB77RqEHU+hYJR+QUy6iF1jC/dfqfF4asCrc1u/Rx/MMMjKVOq8y3XLOe1sMRf7hE4FW+49Zmbx3fQz7X2K7XSZpoKmk8kgcgyTgpRFNITlfOdVECIN7/870x+yuxcUNfmpPleje8fIIQ02/LZaLDnuNiNz5moimbb3YaiGIrSH6YzjUkJ2S+eIux1HKqKkSoRJ0g614GkUXfgYe2/OdoHg/oMQGihO/en/D9cVW4ljMMCki2tIfUM2iaIDLSKJYf0Afz/W8qNS3DT+I0a8XamPIFWrzP4pbF5kUCDijJwg/mhaM7fulGbP92Fg6ibg7Aeh3lu0o125jKhI0w1c2DIW04E+Z2GnXq9uGJbiRWcS4sOlXDt3OwRFCu7CIhs3hjyDqaGfthzVgYEYCxzfeem+zz6MycbbCGWAjYeJnVl+Zd4eSFfQij0xeqMfNg5QZmZeEeZJwqlJiKrmZTL/GdOajacnrn6EnLziRO0VEuslJJPWbVAiQ4y6Sm696Wulh/2Szy7GdmsbM3R0066sSS9u3uzy9wXmXkhADsVf74NPBsy7DhEMGx7mNM5H2cO0s/Bpxh8eSz3DZ1QnlkiTsXPHSxxCkBVqR+aVp7vbQYtGfi5ZxC6Kbq0TeZzUDBhbKUxgX6jdDYB+BZrexj5a4GSt1yRftcoYaZb/9U8Jm9E1d8H0CliiTHJLxdxn/DhKmhMjwZWnfdA/rwbO1BnSdofZi27Kc8EbH4o7I6FjYD9yJKg5SnmBRjnWmrXojjWH9MwXY2dwREaBFkJjJdLpJEQdEtxp+mhltVRBlrTUvjflEuKDzBG/+MjMvXuGk/8iqArHcK6hIdUQVzm1IMTCsrL1b8IFFzxjdXskUERSOkZ+ROnOZ+J8qnzQ9Ro0uw/jeuI+COPkXwN//3qV/KhOojk6kF3SfsihsNQee15cW+VeYFZjX6Ml2a57PdgxrDdkxLXC0kj33Y1D3DFt9x4Sey6sKThbmsHW5IloJJbUYuUc9F3EbxF25Od2oxxNwOIq6ALX0eJe7ydR01TjLpoeUlBMOX0eIjO9nU8gq5pWk1639vOl/BmgYfxJMEQqBzgXIjYc1j4zGCeVhblb2izxXUDtvOCGCe3ijw8Gg4JtIXOGYGe4D9ZYug4SwoUvAX1MDgX0bEEepYrir2wBMYxCED53RyPcavRiP03/PINXnCgQe16q7b80vdlcDcAnC2xDh9PXV8K/cU498ZO/xOVaabNGFr75De/NDjf94mfvIccgEVSFG6618pJKoR6JxzQTp0bBNKiaolfdw0bWZBrGM6eoC+PhEsAfxhQcbHlFXJ8axAyLjaSmSEv6ydcb88PrIlnugaZFofRjf1dim+e4AsHkim84uNg4hPPQBcwr1yy9iQYMq7RpJW5t4t5b1wyLxIt0LJH7M6cYOSHlqxPDj1kQ4dcR227EBFYmhlVDb3F8zUJVAu+56LpUprb+NTd+zDkaT0zhNumO08MEJ7IB04Nfyi59Ux1GIlHaHwqeWnXeEinRemulaq6AEGx76aQwYxtnhUlU/37yk7GYQrg=="
+        },
+        "status": "submitted_approved",
+        "created_by": "agent",
+        "approved_by": 1,
+        "created_at": "2026-10-19 17:26:18.218984",
+        "decided_at": "2026-10-19 17:26:18.234688"
+      }
+    ]
+  },
+  "audit_logs": {
+    "total_rows": 31,
+    "sample_rows_as_stored": [
+      {
+        "id": 1,
+        "ts": "2026-10-19T17:26:17.090223+00:00",
+        "actor": "system",
+        "role": "system",
+        "action": "system.seed_demo_tenants",
+        "business_id": null,
+        "details": "{\"businesses\": [1, 2], \"users\": 4}",
+        "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "entry_hash": "fcdf664676e9cd56d3e3e3e38ecd728922ea793d1ab31c568237db664d172f31"
+      },
+      {
+        "id": 2,
+        "ts": "2026-10-19T17:26:17.322283+00:00",
+        "actor": "user:1:owner@alnour.example",
+        "role": "sme_owner",
+        "action": "auth.login_success",
+        "business_id": 1,
+        "details": "{}",
+        "prev_hash": "fcdf664676e9cd56d3e3e3e38ecd728922ea793d1ab31c568237db664d172f31",
+        "entry_hash": "70003b06131001d7f8be7633df0f8e19592e181656da9da21e85d0902f460fd6"
+      },
+      {
+        "id": 3,
+        "ts": "2026-10-19T17:26:17.569578+00:00",
+        "actor": "user:3:advisor@microflow.example",
+        "role": "advisor",
+        "action": "auth.login_success",
+        "business_id": null,
+        "details": "{}",
+        "prev_hash": "70003b06131001d7f8be7633df0f8e19592e181656da9da21e85d0902f460fd6",
+        "entry_hash": "4b9978a4e30361b73a8ec3418787e90360340359ad1e2469779c394196019b49"
+      },
+      {
+        "id": 4,
+        "ts": "2026-10-19T17:26:17.799115+00:00",
+        "actor": "user:4:auditor@bank.example",
+        "role": "auditor",
+        "action": "auth.login_success",
+        "business_id": null,
+        "details": "{}",
+        "prev_hash": "4b9978a4e30361b73a8ec3418787e90360340359ad1e2469779c394196019b49",
+        "entry_hash": "e6749812cc8bd792e3ce3180002607be5cf026e3cbc7b3d39ce8a314059db8aa"
+      },
+      {
+        "id": 5,
+        "ts": "2026-10-19T17:26:17.989970+00:00",
+        "actor": "user:2:owner@delta.example",
+        "role": "sme_owner",
+        "action": "auth.login_success",
+        "business_id": 2,
+        "details": "{}",
+        "prev_hash": "e6749812cc8bd792e3ce3180002607be5cf026e3cbc7b3d39ce8a314059db8aa",
+        "entry_hash": "b81d3348fbfa329c5b4cda22ec7769928ef04217464b2792021d63d88d6b9247"
+      }
+    ]
+  }
+}

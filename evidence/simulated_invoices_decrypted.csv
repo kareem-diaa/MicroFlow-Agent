@@ -1,0 +1,95 @@
+id,invoice_number,buyer,sector,amount_egp,issue_date,due_date,paid_date,status
+43,ANB-2026-0029,Downtown Public Hospital Canteen,government,107300.0,2025-12-29,2026-02-27,2026-04-16,paid
+44,ANB-2026-0030,Downtown Public Hospital Canteen,government,80800.0,2026-01-22,2026-03-23,2026-05-26,paid
+21,ANB-2026-0001,Nile View Hotel,hotel,152700.0,2026-01-31,2026-03-17,2026-05-04,paid
+45,ANB-2026-0031,Downtown Public Hospital Canteen,government,74900.0,2026-02-09,2026-04-10,2026-07-07,paid
+86,ANB-2026-0082,Heliopolis Hotel Group,hotel,119000.0,2026-02-16,2026-04-02,2026-04-24,paid
+22,ANB-2026-0002,Nile View Hotel,hotel,204000.0,2026-02-18,2026-04-04,2026-05-03,paid
+64,ANB-2026-0057,Giza Food Distributors,distributor,134100.0,2026-02-28,2026-03-30,2026-04-16,paid
+46,ANB-2026-0032,Downtown Public Hospital Canteen,government,93400.0,2026-03-05,2026-05-04,2026-06-02,paid
+87,ANB-2026-0083,Heliopolis Hotel Group,hotel,132100.0,2026-03-06,2026-04-20,2026-05-23,paid
+30,ANB-2026-0014,GreenBasket Supermarkets,supermarket,91600.0,2026-03-10,2026-04-09,2026-04-16,paid
+23,ANB-2026-0003,Nile View Hotel,hotel,180100.0,2026-03-12,2026-04-26,2026-05-17,paid
+65,ANB-2026-0058,Giza Food Distributors,distributor,98800.0,2026-03-24,2026-04-23,2026-05-14,paid
+31,ANB-2026-0015,GreenBasket Supermarkets,supermarket,114300.0,2026-03-26,2026-04-25,2026-05-06,paid
+47,ANB-2026-0033,Downtown Public Hospital Canteen,government,85300.0,2026-03-26,2026-05-25,2026-07-29,paid
+88,ANB-2026-0084,Heliopolis Hotel Group,hotel,166000.0,2026-03-28,2026-05-12,2026-06-17,paid
+24,ANB-2026-0004,Nile View Hotel,hotel,190000.0,2026-04-05,2026-05-20,2026-06-29,paid
+51,ANB-2026-0043,Bean & Crumb Cafes,cafe,31600.0,2026-04-06,2026-04-21,2026-04-26,paid
+73,ANB-2026-0068,Corniche Patisserie,cafe,25600.0,2026-04-08,2026-04-23,2026-04-27,paid
+32,ANB-2026-0016,GreenBasket Supermarkets,supermarket,126600.0,2026-04-10,2026-05-10,2026-05-24,paid
+66,ANB-2026-0059,Giza Food Distributors,distributor,132700.0,2026-04-13,2026-05-13,2026-06-03,paid
+48,ANB-2026-0034,Downtown Public Hospital Canteen,government,92800.0,2026-04-16,2026-06-15,2026-09-05,paid
+89,ANB-2026-0085,Heliopolis Hotel Group,hotel,113400.0,2026-04-16,2026-05-31,2026-06-24,paid
+52,ANB-2026-0044,Bean & Crumb Cafes,cafe,40600.0,2026-04-20,2026-05-05,2026-05-08,paid
+74,ANB-2026-0069,Corniche Patisserie,cafe,33700.0,2026-04-24,2026-05-09,2026-05-20,paid
+33,ANB-2026-0017,GreenBasket Supermarkets,supermarket,97700.0,2026-04-27,2026-05-27,2026-05-31,paid
+25,ANB-2026-0005,Nile View Hotel,hotel,168300.0,2026-04-29,2026-06-13,2026-07-18,paid
+67,ANB-2026-0060,Giza Food Distributors,distributor,97700.0,2026-05-04,2026-06-03,2026-06-22,paid
+75,ANB-2026-0070,Corniche Patisserie,cafe,35500.0,2026-05-06,2026-05-21,2026-05-27,paid
+53,ANB-2026-0045,Bean & Crumb Cafes,cafe,30200.0,2026-05-07,2026-05-22,2026-05-26,paid
+90,ANB-2026-0086,Heliopolis Hotel Group,hotel,161300.0,2026-05-08,2026-06-22,2026-07-08,paid
+49,ANB-2026-0035,Downtown Public Hospital Canteen,government,92100.0,2026-05-10,2026-07-09,2026-08-13,paid
+34,ANB-2026-0018,GreenBasket Supermarkets,supermarket,147800.0,2026-05-12,2026-06-11,2026-06-24,paid
+26,ANB-2026-0006,Nile View Hotel,hotel,179500.0,2026-05-17,2026-07-01,2026-07-23,paid
+76,ANB-2026-0071,Corniche Patisserie,cafe,37300.0,2026-05-21,2026-06-05,2026-06-14,paid
+54,ANB-2026-0046,Bean & Crumb Cafes,cafe,29400.0,2026-05-22,2026-06-06,2026-06-07,paid
+68,ANB-2026-0061,Giza Food Distributors,distributor,104700.0,2026-05-24,2026-06-23,2026-07-20,paid
+35,ANB-2026-0019,GreenBasket Supermarkets,supermarket,150500.0,2026-05-26,2026-06-25,2026-07-08,paid
+50,ANB-2026-0036,Downtown Public Hospital Canteen,government,108700.0,2026-05-28,2026-07-27,2026-10-02,paid
+91,ANB-2026-0087,Heliopolis Hotel Group,hotel,127700.0,2026-05-30,2026-07-14,2026-08-08,paid
+77,ANB-2026-0072,Corniche Patisserie,cafe,28900.0,2026-06-02,2026-06-17,2026-06-26,paid
+27,ANB-2026-0007,Nile View Hotel,hotel,149800.0,2026-06-04,2026-07-19,2026-08-23,paid
+55,ANB-2026-0047,Bean & Crumb Cafes,cafe,48500.0,2026-06-06,2026-06-21,2026-06-22,paid
+36,ANB-2026-0020,GreenBasket Supermarkets,supermarket,123900.0,2026-06-09,2026-07-09,2026-07-28,paid
+69,ANB-2026-0062,Giza Food Distributors,distributor,111800.0,2026-06-14,2026-07-14,2026-07-29,paid
+78,ANB-2026-0073,Corniche Patisserie,cafe,31300.0,2026-06-16,2026-07-01,2026-07-09,paid
+7,ANB-2026-0037,Downtown Public Hospital Canteen,government,90200.0,2026-06-17,2026-08-16,,open
+92,ANB-2026-0088,Heliopolis Hotel Group,hotel,165200.0,2026-06-17,2026-08-01,2026-09-08,paid
+56,ANB-2026-0048,Bean & Crumb Cafes,cafe,28600.0,2026-06-18,2026-07-03,2026-07-03,paid
+37,ANB-2026-0021,GreenBasket Supermarkets,supermarket,91700.0,2026-06-26,2026-07-26,2026-08-09,paid
+28,ANB-2026-0008,Nile View Hotel,hotel,168200.0,2026-06-27,2026-08-11,2026-09-14,paid
+79,ANB-2026-0074,Corniche Patisserie,cafe,28200.0,2026-06-28,2026-07-13,2026-07-16,paid
+57,ANB-2026-0049,Bean & Crumb Cafes,cafe,40700.0,2026-07-04,2026-07-19,2026-07-23,paid
+93,ANB-2026-0089,Heliopolis Hotel Group,hotel,178500.0,2026-07-05,2026-08-19,2026-09-21,paid
+38,ANB-2026-0022,GreenBasket Supermarkets,supermarket,153500.0,2026-07-07,2026-08-06,2026-08-22,paid
+70,ANB-2026-0063,Giza Food Distributors,distributor,88600.0,2026-07-08,2026-08-07,2026-08-22,paid
+8,ANB-2026-0038,Downtown Public Hospital Canteen,government,106400.0,2026-07-10,2026-09-08,,financed
+80,ANB-2026-0075,Corniche Patisserie,cafe,30200.0,2026-07-11,2026-07-26,2026-08-07,paid
+29,ANB-2026-0009,Nile View Hotel,hotel,142800.0,2026-07-17,2026-08-31,2026-10-03,paid
+58,ANB-2026-0050,Bean & Crumb Cafes,cafe,42900.0,2026-07-18,2026-08-02,2026-08-02,paid
+39,ANB-2026-0023,GreenBasket Supermarkets,supermarket,148500.0,2026-07-22,2026-08-21,2026-09-10,paid
+81,ANB-2026-0076,Corniche Patisserie,cafe,30200.0,2026-07-24,2026-08-08,2026-08-13,paid
+17,ANB-2026-0090,Heliopolis Hotel Group,hotel,132400.0,2026-07-29,2026-09-12,,open
+59,ANB-2026-0051,Bean & Crumb Cafes,cafe,39900.0,2026-07-30,2026-08-14,2026-08-16,paid
+71,ANB-2026-0064,Giza Food Distributors,distributor,98200.0,2026-07-30,2026-08-29,2026-09-15,paid
+9,ANB-2026-0039,Downtown Public Hospital Canteen,government,80300.0,2026-08-01,2026-09-30,,open
+40,ANB-2026-0024,GreenBasket Supermarkets,supermarket,99400.0,2026-08-05,2026-09-04,2026-09-22,paid
+1,ANB-2026-0010,Nile View Hotel,hotel,196800.0,2026-08-06,2026-09-20,,open
+82,ANB-2026-0077,Corniche Patisserie,cafe,31100.0,2026-08-06,2026-08-21,2026-08-22,paid
+60,ANB-2026-0052,Bean & Crumb Cafes,cafe,46800.0,2026-08-14,2026-08-29,2026-09-02,paid
+41,ANB-2026-0025,GreenBasket Supermarkets,supermarket,146100.0,2026-08-17,2026-09-16,2026-10-06,paid
+72,ANB-2026-0065,Giza Food Distributors,distributor,92200.0,2026-08-21,2026-09-20,2026-10-07,paid
+83,ANB-2026-0078,Corniche Patisserie,cafe,35600.0,2026-08-21,2026-09-05,2026-09-12,paid
+10,ANB-2026-0040,Downtown Public Hospital Canteen,government,109200.0,2026-08-22,2026-10-21,,open
+18,ANB-2026-0091,Heliopolis Hotel Group,hotel,119300.0,2026-08-22,2026-10-06,,open
+2,ANB-2026-0011,Nile View Hotel,hotel,170400.0,2026-08-29,2026-10-13,,open
+61,ANB-2026-0053,Bean & Crumb Cafes,cafe,34600.0,2026-08-29,2026-09-13,2026-09-15,paid
+5,ANB-2026-0026,GreenBasket Supermarkets,supermarket,121000.0,2026-09-02,2026-10-02,,open
+84,ANB-2026-0079,Corniche Patisserie,cafe,24100.0,2026-09-07,2026-09-22,2026-09-28,paid
+14,ANB-2026-0066,Giza Food Distributors,distributor,90000.0,2026-09-08,2026-10-08,,open
+62,ANB-2026-0054,Bean & Crumb Cafes,cafe,44900.0,2026-09-10,2026-09-25,2026-09-29,paid
+19,ANB-2026-0092,Heliopolis Hotel Group,hotel,150300.0,2026-09-11,2026-10-26,,open
+11,ANB-2026-0041,Downtown Public Hospital Canteen,government,114000.0,2026-09-12,2026-11-11,,open
+42,ANB-2026-0027,GreenBasket Supermarkets,supermarket,106600.0,2026-09-17,2026-10-17,2026-10-17,paid
+85,ANB-2026-0080,Corniche Patisserie,cafe,37000.0,2026-09-18,2026-10-03,2026-10-09,paid
+3,ANB-2026-0012,Nile View Hotel,hotel,172600.0,2026-09-20,2026-11-04,,financed
+63,ANB-2026-0055,Bean & Crumb Cafes,cafe,34900.0,2026-09-25,2026-10-10,2026-10-10,paid
+15,ANB-2026-0067,Giza Food Distributors,distributor,81400.0,2026-09-27,2026-10-27,,financed
+20,ANB-2026-0093,Heliopolis Hotel Group,hotel,127400.0,2026-09-29,2026-11-13,,financed
+6,ANB-2026-0028,GreenBasket Supermarkets,supermarket,142800.0,2026-10-02,2026-11-01,,open
+12,ANB-2026-0042,Downtown Public Hospital Canteen,government,72300.0,2026-10-02,2026-12-01,,open
+16,ANB-2026-0081,Corniche Patisserie,cafe,28000.0,2026-10-04,2026-10-19,,open
+94,ANB-2026-0094,Nile View Hotel,hotel,310000.0,2026-10-07,2026-11-21,,open
+4,ANB-2026-0013,Nile View Hotel,hotel,165300.0,2026-10-10,2026-11-24,,open
+13,ANB-2026-0056,Bean & Crumb Cafes,cafe,45400.0,2026-10-10,2026-10-25,,open

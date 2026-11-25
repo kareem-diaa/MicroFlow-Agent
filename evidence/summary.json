@@ -1,0 +1,140 @@
+{
+  "business": "Al-Nour Bakery Supplies (synthetic)",
+  "ingested": [
+    {
+      "file": "statement_1_apr-jul_2026.csv",
+      "sha256": "bfaba5a3b65e70c15d87f4637479a5399c0fe2ae812f0600f357830fe4356f48",
+      "transactions_added": 172,
+      "categories": {
+        "ipn_inflow": 78,
+        "supplier": 39,
+        "customer_payment": 34,
+        "payroll": 3,
+        "rent": 3,
+        "loan": 3,
+        "utility": 9,
+        "tax": 3
+      }
+    },
+    {
+      "file": "statement_2_jul-oct_2026.pdf",
+      "sha256": "b9b0dad98b9876f39ae4adab2dc2a8b3609f141de036ad3e3007383a35a0dae3",
+      "transactions_added": 175,
+      "categories": {
+        "ipn_inflow": 79,
+        "customer_payment": 36,
+        "supplier": 39,
+        "payroll": 3,
+        "rent": 3,
+        "loan": 3,
+        "utility": 9,
+        "tax": 3
+      }
+    },
+    {
+      "file": "invoices_open.json",
+      "sha256": "d30cabbb6d00e72e5ad6216f67c7ae465bfb0cbda8b335d9990c954fc47a328f",
+      "invoices_added": 20,
+      "duplicates_skipped": []
+    },
+    {
+      "file": "invoices_paid_history.xml",
+      "sha256": "c5f94f0985baba503bf9af431e5296c71ad626a16d8c0bce4a0f35e09e810eeb",
+      "invoices_added": 73,
+      "duplicates_skipped": []
+    },
+    {
+      "file": "invoice_single_open.pdf",
+      "sha256": "ccd9dcef066ff72d5801e0b3464e92f860d86c6da182c5397cc967e6c6ee83cc",
+      "invoices_added": 1,
+      "duplicates_skipped": []
+    }
+  ],
+  "credit_score": 57.9,
+  "grade": "C",
+  "score_breakdown": {
+    "inflow_stability": 61.7,
+    "net_cash_margin": 41.1,
+    "obligation_consistency": 100.0,
+    "digital_footprint": 37.2,
+    "receivables_quality": 59.3,
+    "buyer_concentration": 84.0,
+    "liquidity_buffer": 16.9
+  },
+  "start_balance": 337040.0,
+  "min_balance_base": -80433.46,
+  "min_balance_stress": -769850.68,
+  "funding_gap": 391649.32,
+  "alerts": [
+    "[base] Balance turns negative in week 1 (from 2026-10-19): EGP -75,056",
+    "[stress] Balance turns negative in week 1 (from 2026-10-19): EGP -80,884",
+    "Balance drops below the 7-day buffer (EGP 311,216) in week 3",
+    "Nile View Hotel holds 39% of open receivables"
+  ],
+  "recommended_financing": {
+    "provider": "NileFactor (sandbox NBFI)",
+    "product": "invoice_factoring",
+    "funds_unlocked": 414630.0,
+    "total_cost": 17331.6,
+    "cost_per_1000_egp": 41.8
+  },
+  "alternatives": [
+    {
+      "provider": "NileFactor (sandbox NBFI)",
+      "product": "invoice_factoring",
+      "eligible": true,
+      "funds_unlocked": 414630.0,
+      "total_cost": 17331.6,
+      "reason": null
+    },
+    {
+      "provider": "Delta Receivables Finance (sandbox NBFI)",
+      "product": "invoice_discounting",
+      "eligible": false,
+      "funds_unlocked": null,
+      "total_cost": null,
+      "reason": "Requires score >= 60"
+    },
+    {
+      "provider": "Cairo Micro Lending (sandbox)",
+      "product": "working_capital_loan",
+      "eligible": true,
+      "funds_unlocked": 391649.32,
+      "total_cost": 37355.26,
+      "reason": null
+    }
+  ],
+  "agent_steps": [
+    {
+      "step": "observe",
+      "summary": "Balance EGP 337,040; 13 alerts raised over 13 weeks"
+    },
+    {
+      "step": "analyse",
+      "summary": "Credit score 57.9 (C); funding gap EGP 391,649 (min base balance EGP -80,433, stress EGP -769,851)"
+    },
+    {
+      "step": "decide",
+      "summary": "Cheapest option covering the gap: NileFactor (sandbox NBFI) (invoice_factoring), EGP 414,630 for EGP 17,332 cost"
+    },
+    {
+      "step": "act",
+      "summary": "draft_financing_application, request_advisor_review, publish_alerts"
+    },
+    {
+      "step": "guardrail",
+      "summary": "Drafts wait for owner approval; nothing is submitted automatically"
+    }
+  ],
+  "provider_response": {
+    "provider": "NileFactor (sandbox NBFI)",
+    "reference": "SBX-F4025422B7",
+    "decision": "approved",
+    "amount": 414630.0,
+    "disbursement": "T+2 business days (sandbox)",
+    "note": "Simulated response from the MicroFlow sandbox; no real funds move."
+  },
+  "security_tests_passed": "12/12",
+  "audit_entries": 30,
+  "audit_chain_valid": true
+}

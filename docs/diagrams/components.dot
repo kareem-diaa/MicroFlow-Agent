@@ -1,0 +1,30 @@
+digraph G {
+  rankdir=LR; bgcolor="white"; pad=0.3; nodesep=0.45; ranksep=0.7;
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, color="#9AA7BD", fillcolor="#F5F6F2", margin="0.18,0.10"];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#46536A"];
+  user [label="SME owner / Advisor /\nBank auditor\n(browser)", shape=box, fillcolor="#FFFFFF"];
+  subgraph cluster_dash { label="dashboard container"; style="rounded,dashed"; color="#9AA7BD"; fontname="DejaVu Sans"; fontsize=10;
+    ui [label="Streamlit UI\nfrontend/app.py", fillcolor="#E4ECFA"]; }
+  subgraph cluster_api { label="api container (FastAPI, backend/)"; style="rounded,dashed"; color="#9AA7BD"; fontname="DejaVu Sans"; fontsize=10;
+    gw [label="main.py\nREST endpoints\nsecurity headers · CORS", fillcolor="#E4ECFA"];
+    sec [label="security.py\nJWT · RBAC · tenant scope\nAES-256-GCM envelopes\nhash-chained audit", fillcolor="#FBE9DB"];
+    parse [label="parser.py\nPDF / CSV / XML / JSON /\ninformal text"];
+    ai [label="ai_engine.py\nXGBoost delay model\nexplainable scorecard\npolicy checks"];
+    cp [label="copilot.py\n13-week forecast · alerts\nfinancing matcher\nagent plan · EN/AR Q&A"];
+    cache [label="cache.py\nTTL cache"];
+  }
+  db [label="PostgreSQL\n(SQLite in local demo)\nencrypted columns", shape=cylinder, fillcolor="#FFFFFF"];
+  redis [label="Redis\n(optional)", shape=cylinder, fillcolor="#FFFFFF"];
+  kms [label="Master key\n(env / KMS)", shape=box, style="rounded,dashed", fillcolor="#FFFFFF"];
+  nbfi [label="Financing provider\n(sandbox, simulated)", fillcolor="#FFFFFF"];
+  user -> ui [label="HTTPS"];
+  ui -> gw [label="REST + Bearer JWT"];
+  gw -> sec [label="authn / authz\nevery request"];
+  gw -> parse [label="uploads"];
+  gw -> ai; gw -> cp; ai -> cp [label="predicted delays\nscore"];
+  gw -> cache; cache -> redis [style=dashed];
+  sec -> db [label="encrypt / decrypt\naudit append"];
+  parse -> sec [label="validated rows"];
+  sec -> kms [style=dashed, label="wrap / unwrap DEK"];
+  gw -> nbfi [label="after owner approval", color="#C4651C", fontcolor="#C4651C"];
+}

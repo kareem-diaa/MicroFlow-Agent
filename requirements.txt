@@ -6,6 +6,7 @@ python-multipart>=0.0.9
 SQLAlchemy>=2.0,<3
 # AI / data
 xgboost>=2.1
+scikit-learn>=1.4    # required by xgboost's XGBRegressor wrapper
 numpy>=1.26
 pandas>=2.2
 pymupdf>=1.24

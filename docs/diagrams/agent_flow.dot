@@ -1,0 +1,20 @@
+digraph F {
+  rankdir=TB; bgcolor="white"; pad=0.3; nodesep=0.3; ranksep=0.32;
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=10.5, color="#9AA7BD", fillcolor="#F5F6F2", width=4.2, margin="0.15,0.07"];
+  edge [color="#46536A", arrowsize=0.7];
+  a [label="1  POST /api/agent/run  (Bearer JWT)", fillcolor="#E4ECFA"];
+  b [label="2  Verify JWT (exp, iss, role still matches)  →  401 on failure"];
+  c [label="3  Permission agent:run  →  403 if role lacks it"];
+  d [label="4  resolve_business(): business in caller's scope  →  403 otherwise"];
+  e [label="5  Load invoices + transactions; decrypt fields in memory (AES-256-GCM)"];
+  f [label="6  XGBoost: predicted delay + collection date per open invoice"];
+  g [label="7  Scorecard: 7 factors → score, grade, reasons, policy checks"];
+  h [label="8  Forecast: 13 weeks × base/stress → alerts, funding gap"];
+  i [label="9  Matcher: rank eligible offers by cost per EGP 1,000"];
+  j [label="10  Agent plan: observe → analyse → decide → act"];
+  k [label="11  Store draft (encrypted payload), status = pending_owner_approval", fillcolor="#FBE9DB"];
+  l [label="12  Audit: agent.financing_drafted + agent.run (decision SHA-256)", fillcolor="#FBE9DB"];
+  m [label="13  Owner: POST /approve  (financing:approve, owner only)", fillcolor="#E4ECFA"];
+  n [label="14  Sandbox provider decision → invoices marked financed → audited"];
+  a->b->c->d->e->f->g->h->i->j->k->l->m->n;
+}
