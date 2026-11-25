@@ -23,7 +23,7 @@ MicroFlow Agent helps small-business owners see a cash crisis weeks before it ha
 
 **Guardrails that will not change:** the LLM plans, but every number comes from the deterministic, tested tools; any action that leaves the system (a reminder, a financing application) needs the owner's explicit approval; every agent step is written to the tamper-evident audit log.
 
-**Demo:** [DEMO LINK] · **Video:** [VIDEO LINK]
+**Demo:** https://microflow-agent.streamlit.app/ · **Video:** https://youtu.be/OxxvpkEObDQ
 
 ## Quick start (local, ~3 minutes)
 
